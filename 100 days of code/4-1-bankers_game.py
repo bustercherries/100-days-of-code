@@ -8,7 +8,8 @@ names = names_string.split(", ")
 #Write your code below this line 👇
 number_of_people = len(names)
 print(number_of_people)
-index = random.randint(0,number_of_people)
+index = random.randint(0,number_of_people-1)
+print(index)
 winner = names[index]
 print(winner +" is going to pay a bill!")
 
