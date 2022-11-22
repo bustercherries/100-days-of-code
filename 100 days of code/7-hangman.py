@@ -11,7 +11,7 @@ print(logo)
 
 #Create blanks
 display = []
-for _ in range(word_length):
+for word in range(word_length):
     display += "_"
 
 while not end_of_game:
