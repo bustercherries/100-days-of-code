@@ -5,6 +5,7 @@ from hangman_art import stages, logo
 chosen_word = random.choice(hangman_words.word_list)
 word_length = len(chosen_word)
 
+#decalre a flag that would end the game
 end_of_game = False
 lives = 6
 print(logo)
