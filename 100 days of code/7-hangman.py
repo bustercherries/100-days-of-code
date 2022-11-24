@@ -10,7 +10,7 @@ end_of_game = False
 lives = 6
 print(logo)
 
-#Create blanks
+#Create blanks - blabla bla
 display = []
 for word in range(word_length):
     display += "_"
