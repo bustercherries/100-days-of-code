@@ -35,7 +35,7 @@ while game_over == False:
     
     if lives == 0:
         game_over = True
-        print("Sorry to inform you but you lost it. \nThis is the end of this game.")
+        print("Sorry to inform you but you lost it.")
 
     if not "_" in display:
         game_over = True
