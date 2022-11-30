@@ -4,33 +4,15 @@ direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
-def encrypt(text, shift):
+#TODO-1: Combine the encrypt() and decrypt() functions into a single function called caesar(). 
+def ceasar(c_direction, c_text, c_shift):
     cipher = ""
     index = 0
-    for letter in text:
+    for letter in c_text:
         index = alphabet.index(letter)
-        cipher += alphabet[index + shift]
-    print(f"The encoded text is {cipher}")
+        if c_direction == "decode":
+            c_shift *= -1
+        cipher += alphabet[index + c_shift]
+    print(f"The {c_direction}d text is {cipher}")
 
-#TODO-1: Create a different function called 'decrypt' that takes the 'text' and 'shift' as inputs.
-def decrypt(text, shift):
-    decipher = ""
-    index = 0
-    for letter in text:
-        index = alphabet.index(letter)
-        decipher += alphabet[index - shift]
-    print(f"The decoded text is {decipher}")
-  #TODO-2: Inside the 'decrypt' function, shift each letter of the 'text' *backwards* in the alphabet by the shift amount and print the decrypted text.  
-  #e.g. 
-  #cipher_text = "mjqqt"
-  #shift = 5
-  #plain_text = "hello"
-  #print output: "The decoded text is hello"
-
-
-#TODO-3: Check if the user wanted to encrypt or decrypt the message by checking the 'direction' variable. Then call the correct function based on that 'drection' variable. You should be able to test the code to encrypt *AND* decrypt a message.
-
-if direction == 'encode':
-    encrypt(text, shift)
-elif direction == 'decode':
-    decrypt(text,shift)
+ceasar(direction, text, shift)
