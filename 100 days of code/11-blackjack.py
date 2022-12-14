@@ -31,5 +31,13 @@
 import random
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+user_cards = []
+dealer_cards = []
 
-user_card = random.
+for card in range(2):
+    random_card_user = random.choice(cards)
+    user_cards += str(random_card_user)
+    random_card_dealer = random.choice(cards)
+    dealer_cards += str(random_card_dealer)
+    
+print(f"User cards: {user_cards}, Dealer cards: {dealer_cards}")
