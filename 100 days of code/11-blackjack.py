@@ -40,4 +40,4 @@ for card in range(2):
     random_card_dealer = random.choice(cards)
     dealer_cards += str(random_card_dealer)
     
-print(f"User cards: {user_cards}, Dealer cards: {dealer_cards}")
+print(f"User cards: {user_cards}, Dealer cards: {dealer_cards}")#blablabla
